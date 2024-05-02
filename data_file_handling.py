@@ -9,7 +9,7 @@ import pickle as pikol
 #defining add_record
 def ADD():
   n = int(input("How many users: "))
-  with open("book.dat","ab") as u:
+  with open("book.dat","wb") as u:
     for i in range(n):
       b_id = float(input("Enter the book id: "))
       naam = input("Enter the book name: ")
@@ -17,7 +17,7 @@ def ADD():
       b_quantity=int(input("Enter the book quantity: "))
       lst=[b_id,naam,b_price,b_quantity]
       pikol.dump(lst,u)
-      print("Record added")
+      print("YAY its done now bye :)")
 
 #defining read_record
 def SHOW():
@@ -45,14 +45,13 @@ def SEARCH():
                 print("eall the records have been displayed :)")
                 break
 
-u_int = input("Choose properly \n halaluya : adding \n halaluya 2 : Showing all records \n halaluya 3: Showing all records with quantity more than 10 \n Enter the response here: ")
+u_int = input(" Choose your option: \n halaluya : adding \n halaluya 2 : Showing all records \n halaluya 3: Showing all records with quantity more than 10 \n Enter the response here: ")
 
 if u_int == "halaluya":
     ADD()
-    print("YAY its done now bye :)")
 elif u_int == "halaluya 2":
     SHOW()
 elif u_int == "halaluya 3":
     SEARCH()
 else:
-    print("PLEASE check your reply... what is this huh?")
+    print("PLEASE check your reply... very bad very bad 😒")
