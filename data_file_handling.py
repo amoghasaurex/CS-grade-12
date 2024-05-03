@@ -44,14 +44,28 @@ def SEARCH():
             except EOFError:
                 print("eall the records have been displayed :)")
                 break
+              
+              
+while True:
+  u_input = input(""" 
+  Choose your option: 
+  ----------------------
+    halaluya : adding 
+    halaluya 2 : Showing all records 
+    halaluya 3: Showing all records with quantity more than 10  
+    halaluya quit: Quit the program
+  ----------------------
+    Enter the response here: """)
 
-u_int = input(" Choose your option: \n halaluya : adding \n halaluya 2 : Showing all records \n halaluya 3: Showing all records with quantity more than 10 \n Enter the response here: ")
-
-if u_int == "halaluya":
+  if u_input == "halaluya":
     ADD()
-elif u_int == "halaluya 2":
+  elif u_input == "halaluya 2":
     SHOW()
-elif u_int == "halaluya 3":
+  elif u_input == "halaluya 3":
     SEARCH()
-else:
+  elif u_input == "halaluya quit":
+    print("BYEEE :(")
+    break
+  else:
     print("PLEASE check your reply... very bad very bad 😒")
+  
