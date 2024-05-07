@@ -12,13 +12,13 @@ simble :)
 
 # first you take the marks of the subjects
 meth = float(input("Enter marks for Math: "))
-Eunglish = float(input("Enter marks for English: "))
+eunglish = float(input("Enter marks for English: "))
 eSESt = float(input("Enter marks for SST: "))
-Phyzics = float(input("Enter marks for Physics: "))
-Cimistry = float(input("Enter marks for Chemistry: "))
+phyzics = float(input("Enter marks for Physics: "))
+cimistry = float(input("Enter marks for Chemistry: "))
 
 # now you calculate total markk
-total_marks = meth+Eunglish+Phyzics+Cimistry
+total_marks = meth+eunglish+phyzics+cimistry
 
 # here calculate average
 average = total_marks / 5
