@@ -9,7 +9,7 @@ import csv as yoda
 
 def addingrecord():
     n = int(input("How many Hospitals : "))
-    with open ("Hospital.csv","w") as inspector:
+    with open ("Hospital.csv","w", newline='') as inspector:
         for i in range(n):
             wobj = yoda.writer(inspector)
             hospitalid = int(input("Enter Hospital ID: "))
@@ -39,7 +39,7 @@ def search():
                 R=[]
                 R=yoda.reader(change)
                 if id==R[3]:
-                    print(R)
+                    print(R) 
             except EOFError:
                 print("\neyall the records have been displayed :)")
                 break
