@@ -73,16 +73,15 @@ def UPDATE():
           existing[1] = new_name
           existing[2] = new_desig
 
-          supervisor_3.seek(0)  # Move the pointer to the beginning of the file
-          pikol.dump(existing, supervisor_3)  # Save the updated data
+          supervisor_3.seek(0)  
+          pikol.dump(existing, supervisor_3)  
           print("\nDone\n")
-          break  # Exit the loop after successful update
+          break 
         else:
           print("ID not found. Try again or enter 'q' to quit.")
           user_choice = input("Enter your choice: ")
           if user_choice.lower() == 'q':
-            break  # Exit the loop if user chooses to quit
-
+            break  
   except (EOFError, FileNotFoundError):
     print("Error: File not found or empty.")
           
