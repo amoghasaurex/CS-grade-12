@@ -55,27 +55,36 @@ def DISPLAY():
 
 #defining UPDATE_record
 def UPDATE():
-  with open("Teacher.dat","rb+") as superviser_3:
-    while True:
+  try:
+    with open("Teacher.dat", "rb+") as supervisor_3:
       try:
-        existing = []
-        existing = pikol.load(superviser_3)
+        existing = pikol.load(supervisor_3)  # Assuming the file uses pickle
+      except EOFError:
+        print("Error: File is empty.")
+        return
+      while True:
         id_to_update = float(input("Enter the id you want to update: "))
-        if existing[0]==id_to_update:
+        if existing[0] == id_to_update:
           new_id = float(input("Enter the New ID: "))
           new_name = input("Enter the new Name: ")
           new_desig = input("Enter the new Desgination: ")
-          
-          existing[0]=new_id
-          existing[1]=new_name
-          existing[2]=new_desig
-          
+
+          existing[0] = new_id
+          existing[1] = new_name
+          existing[2] = new_desig
+
+          supervisor_3.seek(0)  # Move the pointer to the beginning of the file
+          pikol.dump(existing, supervisor_3)  # Save the updated data
           print("\nDone\n")
-          
-      except EOFError:
-        print("\nAll the records have been fetched :) ")
-        break
-                    
+          break  # Exit the loop after successful update
+        else:
+          print("ID not found. Try again or enter 'q' to quit.")
+          user_choice = input("Enter your choice: ")
+          if user_choice.lower() == 'q':
+            break  # Exit the loop if user chooses to quit
+
+  except (EOFError, FileNotFoundError):
+    print("Error: File not found or empty.")
           
           
 
