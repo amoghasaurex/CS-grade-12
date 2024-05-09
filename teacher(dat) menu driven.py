@@ -58,7 +58,7 @@ def UPDATE():
   try:
     with open("Teacher.dat", "rb+") as supervisor_3:
       try:
-        existing = pikol.load(supervisor_3)  # Assuming the file uses pickle
+        existing = pikol.load(supervisor_3) 
       except EOFError:
         print("Error: File is empty.")
         return
