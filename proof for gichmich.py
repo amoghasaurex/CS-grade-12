@@ -36,3 +36,5 @@ if percentage < 99:
     print("\nOH MY DAYSS YOU GOT LESS THAN 99% \n NAHH SKILL ISSUE FRFR :D\n")
 else:
     print("OK NERD 🤓")
+    
+    
