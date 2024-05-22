@@ -27,8 +27,8 @@ average = total_marks / 5
 percentage = (total_marks / 500) * 100
 
 # and you print here simblee
-print("Average marks:", average)
-print("Percentage:", percentage)
+print("\nAverage marks:", average)
+print("\nPercentage:",percentage,"%")
 
 # I like to add my own stuff in the code asw 😃😃
 
